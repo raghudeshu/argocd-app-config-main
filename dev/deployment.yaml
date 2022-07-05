@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temporalweb
+spec:
+  selector:
+    matchLabels:
+      app: temporalweb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: temporalweb
+    spec:
+      containers:
+      - name: temporalweb
+        image: temporalio/web
+        ports:
+        - containerPort: 8081

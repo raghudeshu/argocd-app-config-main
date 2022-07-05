@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: temporalweb-service
+spec:
+  selector:
+    app: temporalweb
+  ports:
+  - port: 8081
+    protocol: TCP
+    targetPort: 8081
+  
